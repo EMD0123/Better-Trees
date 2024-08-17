@@ -2,7 +2,8 @@
   "pack": {
     "pack_format": 41,
     "supported_formats": [
-      41
+      41,
+      48
     ],
     "description": "Vanilla style improvements for overworld trees"
   }
