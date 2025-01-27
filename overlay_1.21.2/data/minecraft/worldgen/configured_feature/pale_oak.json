@@ -55,7 +55,7 @@
       },
       "mangrove_root_placement": {
         "max_root_width": 1,
-        "max_root_length": 10,
+        "max_root_length": 20,
         "random_skew_chance": 0.5,
         "can_grow_through": "#minecraft:replaceable",
         "muddy_roots_in": "minecraft:mud",
