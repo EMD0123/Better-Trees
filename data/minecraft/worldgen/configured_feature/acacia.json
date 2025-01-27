@@ -5,9 +5,10 @@
     "force_dirt": false,
     "minimum_size": {
       "type": "minecraft:two_layers_feature_size",
-      "limit": 1,
+      "min_clipped_height": 4,
+      "limit": 0,
       "lower_size": 0,
-      "upper_size": 2
+      "upper_size": 0
     },
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
