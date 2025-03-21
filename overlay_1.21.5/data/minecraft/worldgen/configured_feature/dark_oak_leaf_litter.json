@@ -380,6 +380,53 @@
         "height": 2,
         "radius": 3,
         "tries": 150
+      },
+      {
+        "type": "minecraft:place_on_ground",
+        "block_state_provider": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 1,
+              "data": {
+                "Name": "minecraft:brown_mushroom"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "Name": "minecraft:red_mushroom"
+              }
+            }
+          ]
+        },
+        "height": 2,
+        "radius": 5,
+        "tries": 32
+      },
+      {
+        "type": "minecraft:attached_to_logs",
+        "probability": 0.3,
+        "block_provider": {
+          "type": "minecraft:weighted_state_provider",
+          "entries": [
+            {
+              "weight": 1,
+              "data": {
+                "Name": "minecraft:brown_mushroom"
+              }
+            },
+            {
+              "weight": 1,
+              "data": {
+                "Name": "minecraft:red_mushroom"
+              }
+            }
+          ]
+        },
+        "directions": [
+          "up"
+        ]
       }
     ]
   }
