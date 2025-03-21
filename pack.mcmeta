@@ -3,7 +3,7 @@
     "pack_format": 41,
     "supported_formats": [
       41,
-      61
+      71
     ],
     "description": "Vanilla style improvements for overworld trees"
   },
@@ -15,6 +15,13 @@
           10000
         ],
         "directory": "overlay_1.21.2"
+      },
+      {
+        "formats": [
+          69,
+          10000
+        ],
+        "directory": "overlay_1.21.5"
       }
     ]
   }
