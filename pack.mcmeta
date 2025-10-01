@@ -1,15 +1,16 @@
 {
   "pack": {
+    "min_format": 41,
+    "max_format": 88,
     "pack_format": 41,
-    "supported_formats": [
-      41,
-      80
-    ],
+    "supported_formats": [41,88],
     "description": "Vanilla style improvements for overworld trees"
   },
   "overlays": {
     "entries": [
       {
+        "min_format": 56,
+        "max_format": 10000,
         "formats": [
           56,
           10000
@@ -17,6 +18,8 @@
         "directory": "overlay_1.21.2"
       },
       {
+        "min_format": 69,
+        "max_format": 10000,
         "formats": [
           69,
           10000
