@@ -1,0 +1,142 @@
+{
+  "type": "minecraft:tree",
+  "ignore_vines": true,
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size",
+    "min_clipped_height": 4,
+    "limit": 0,
+    "lower_size": 0,
+    "upper_size": 0
+  },
+  "below_trunk_provider": {
+    "type": "minecraft:rule_based",
+    "rules": [
+      {
+        "if_true": {
+          "type": "minecraft:not",
+          "predicate": {
+            "type": "minecraft:true"
+          }
+        },
+        "then": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:air"
+          }
+        }
+      }
+    ]
+  },
+  "trunk_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:spruce_log"
+    }
+  },
+  "foliage_provider": {
+    "type": "minecraft:rule_based",
+    "rules": [
+      {
+        "if_true": {
+          "type": "minecraft:not",
+          "predicate": {
+            "type": "minecraft:true"
+          }
+        },
+        "then": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "minecraft:air"
+          }
+        }
+      }
+    ]
+  },
+  "root_placer": {
+    "type": "minecraft:mangrove_root_placer",
+    "root_provider": {
+      "type": "minecraft:rule_based",
+      "rules": [
+        {
+          "if_true": {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:matching_blocks",
+              "blocks": "minecraft:spruce_log"
+            }
+          },
+          "then": {
+            "type": "minecraft:simple",
+            "state": {
+              "id": "minecraft:spruce_wood"
+            }
+          }
+        }
+      ]
+    },
+    "trunk_offset_y": 0,
+    "above_root_placement": {
+      "above_root_provider": {
+        "type": "minecraft:rule_based",
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:not",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:spruce_log"
+              }
+            },
+            "then": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:spruce_wood"
+              }
+            }
+          }
+        ]
+      },
+      "above_root_placement_chance": 0.5
+    },
+    "mangrove_root_placement": {
+      "max_root_width": 1,
+      "max_root_length": 5,
+      "random_skew_chance": 1,
+      "can_grow_through": "#minecraft:replaceable_by_trees",
+      "muddy_roots_in": "minecraft:mud",
+      "muddy_roots_provider": {
+        "type": "minecraft:rule_based",
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:not",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:spruce_log"
+              }
+            },
+            "then": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:spruce_wood"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "trunk_placer": {
+    "type": "minecraft:straight_trunk_placer",
+    "base_height": 2,
+    "height_rand_a": 0,
+    "height_rand_b": 0
+  },
+  "foliage_placer": {
+    "type": "minecraft:blob_foliage_placer",
+    "radius": 0,
+    "offset": 0,
+    "height": 0
+  },
+  "decorators": []
+}
