@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:tree",
+  "below_trunk_provider": {
+    "type": "minecraft:rule_based",
+    "rules": [
+      {
+        "if_true": {
+          "type": "minecraft:not",
+          "predicate": {
+            "type": "minecraft:true"
+          }
+        },
+        "then": {
+          "type": "minecraft:simple",
+          "state": {
+            "id": "dirt"
+          }
+        }
+      }
+    ]
+  },
+  "decorators": [
+  ],
+  "foliage_placer": {
+    "type": "minecraft:acacia_foliage_placer",
+    "radius": 3,
+    "offset": 1
+  },
+  "foliage_provider": {
+    "id": "minecraft:jungle_leaves",
+    "properties": {
+      "distance": "7",
+      "persistent": "false",
+      "waterlogged": "false"
+    }
+  },
+  "ignore_vines": true,
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size"
+  },
+  "trunk_placer": {
+    "type": "minecraft:cherry_trunk_placer",
+    "base_height": 5,
+    "height_rand_a": 0,
+    "height_rand_b": 0,
+    "branch_count": 3,
+    "branch_horizontal_length": 6,
+    "branch_start_offset_from_top": {
+      "min_inclusive": -5,
+      "max_inclusive": -3
+    },
+    "branch_end_offset_from_top": -1
+  },
+  "trunk_provider": {
+    "id": "minecraft:jungle_log",
+    "properties": {
+      "axis": "y"
+    }
+  }
+}

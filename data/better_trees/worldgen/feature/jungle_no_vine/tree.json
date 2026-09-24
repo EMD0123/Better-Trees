@@ -1,0 +1,74 @@
+{
+  "type": "minecraft:tree",
+  "below_trunk_provider": "minecraft:soil_beneath_tree",
+  "decorators": [
+  ],
+  "foliage_placer": {
+    "type": "minecraft:acacia_foliage_placer",
+    "radius": 3,
+    "offset": 1
+  },
+  "foliage_provider": {
+    "id": "minecraft:jungle_leaves",
+    "properties": {
+      "distance": "7",
+      "persistent": "false",
+      "waterlogged": "false"
+    }
+  },
+  "root_placer": {
+    "type": "minecraft:mangrove_root_placer",
+    "root_provider": {
+      "type": "minecraft:simple",
+      "state": {
+        "id": "minecraft:jungle_wood"
+      }
+    },
+    "trunk_offset_y": 0,
+    "above_root_placement": {
+      "above_root_provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:jungle_wood"
+        }
+      },
+      "above_root_placement_chance": 0.5
+    },
+    "mangrove_root_placement": {
+      "max_root_width": 1,
+      "max_root_length": 20,
+      "random_skew_chance": 1,
+      "can_grow_through": "#minecraft:replaceable",
+      "muddy_roots_in": "minecraft:mud",
+      "muddy_roots_provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:jungle_wood"
+        }
+      }
+    }
+  },
+  "ignore_vines": true,
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size"
+  },
+  "trunk_placer": {
+    "type": "minecraft:cherry_trunk_placer",
+    "base_height": 10,
+    "height_rand_a": 5,
+    "height_rand_b": 5,
+    "branch_count": 3,
+    "branch_horizontal_length": 6,
+    "branch_start_offset_from_top": {
+      "min_inclusive": -7,
+      "max_inclusive": -6
+    },
+    "branch_end_offset_from_top": -1
+  },
+  "trunk_provider": {
+    "id": "minecraft:jungle_log",
+    "properties": {
+      "axis": "y"
+    }
+  }
+}
