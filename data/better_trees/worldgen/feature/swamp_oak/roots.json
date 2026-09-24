@@ -1,0 +1,129 @@
+{
+  "type": "minecraft:overlay",
+  "features": [
+    {
+      "feature": {
+        "type": "minecraft:block_column",
+        "direction": "down",
+        "allowed_placement": {
+          "type": "minecraft:matching_block_tag",
+          "offset": [
+            0,
+            1,
+            0
+          ],
+          "tag": "minecraft:replaceable_by_trees"
+        },
+        "prioritize_tip": false,
+        "layers": [
+          {
+            "height": 10,
+            "provider": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:oak_wood"
+              }
+            }
+          }
+        ]
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:not",
+            "predicate": {
+              "type": "minecraft:volume_match",
+              "min": [
+                0,
+                -10,
+                0
+              ],
+              "max": [
+                0,
+                0,
+                0
+              ],
+              "match": {
+                "type": "minecraft:matching_block_tag",
+                "tag": "minecraft:replaceable_by_trees"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "id": "minecraft:brown_mushroom"
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:random_chance",
+          "chance": 0.5
+        },
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "#air"
+          }
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:would_survive",
+            "state": {
+              "id": "minecraft:brown_mushroom"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "to_place": {
+          "id": "dirt"
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:environment_scan",
+          "direction_of_search": "down",
+          "max_steps": 11,
+          "target_condition": {
+            "type": "minecraft:all_of",
+            "predicates": [
+              {
+                "type": "minecraft:matching_block_tag",
+                "tag": "grass_blocks"
+              },
+              {
+                "type": "minecraft:matching_blocks",
+                "offset": [
+                  0,
+                  1,
+                  0
+                ],
+                "blocks": "minecraft:oak_wood"
+              }
+            ]
+          },
+          "allowed_search_condition": {
+            "type": "minecraft:true"
+          }
+        }
+      ]
+    }
+  ]
+}

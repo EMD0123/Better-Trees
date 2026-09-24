@@ -1,0 +1,122 @@
+{
+  "type": "minecraft:tree",
+  "below_trunk_provider": "minecraft:soil_beneath_tree",
+  "decorators": [
+    {
+      "type": "minecraft:trunk_vine"
+    },
+    {
+      "type": "minecraft:leave_vine",
+      "probability": 0.1
+    },
+    {
+      "type": "minecraft:attached_to_logs",
+      "probability": 0.5,
+      "block_provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:brown_mushroom"
+        }
+      },
+      "directions": [
+        "up"
+      ]
+    },
+    {
+      "type": "minecraft:attached_to_leaves",
+      "probability": 0.85,
+      "exclusion_radius_xz": 0,
+      "exclusion_radius_y": 0,
+      "required_empty_blocks": 1,
+      "block_provider": {
+        "type": "minecraft:rule_based",
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "blocks": "#minecraft:replaceable"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "blocks": "#minecraft:replaceable"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "blocks": "#minecraft:replaceable"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "blocks": "#minecraft:replaceable"
+                }
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:oak_leaves"
+              }
+            }
+          }
+        ]
+      },
+      "directions": [
+        "down"
+      ]
+    }
+  ],
+  "foliage_placer": {
+    "type": "minecraft:cherry_foliage_placer",
+    "radius": 4,
+    "offset": 1,
+    "height": 4,
+    "wide_bottom_layer_hole_chance": 1,
+    "corner_hole_chance": 1,
+    "hanging_leaves_chance": 0.85,
+    "hanging_leaves_extension_chance": 0.85
+  },
+  "foliage_provider": {
+    "type": "minecraft:simple",
+    "state": {
+      "id": "minecraft:oak_leaves"
+    }
+  },
+  "ignore_vines": false,
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size"
+  },
+  "trunk_placer": {
+    "type": "minecraft:fancy_trunk_placer",
+    "base_height": 20,
+    "height_rand_a": 2,
+    "height_rand_b": 2
+  },
+  "trunk_provider": {
+    "id": "minecraft:oak_log",
+    "properties": {
+      "axis": "y"
+    }
+  }
+}
