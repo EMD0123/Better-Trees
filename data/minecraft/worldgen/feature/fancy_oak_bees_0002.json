@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:random_selector",
-  "features": [],
-  "default": {
-    "feature": "oak_bees_0002",
-    "placement": []
-  }
-}
