@@ -1,0 +1,246 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    {
+      "feature": "better_trees:trees/jungle_no_vine/tree",
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:volume_match",
+            "min": [
+              0,
+              0,
+              0
+            ],
+            "max": [
+              0,
+              16,
+              0
+            ],
+            "match": {
+              "type": "minecraft:not",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:jungle_log"
+              }
+            }
+          }
+        },
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 16,
+          "z": 0
+        },
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:volume_match",
+            "min": [
+              0,
+              0,
+              0
+            ],
+            "max": [
+              0,
+              16,
+              0
+            ],
+            "match": {
+              "type": "minecraft:not",
+              "predicate": {
+                "type": "minecraft:matching_blocks",
+                "blocks": "minecraft:jungle_log"
+              }
+            }
+          }
+        },
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": -16,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:overlay",
+              "features": [
+                {
+                  "feature": "better_trees:trees/jungle_no_vine/branches",
+                  "placement": []
+                },
+                {
+                  "feature": "better_trees:trees/jungle_no_vine/branches",
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": -4,
+                      "y": 0,
+                      "z": 0
+                    }
+                  ]
+                },
+                {
+                  "feature": "better_trees:trees/jungle_no_vine/branches",
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": 4,
+                      "y": 0,
+                      "z": 0
+                    }
+                  ]
+                },
+                {
+                  "feature": "better_trees:trees/jungle_no_vine/branches",
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": 0,
+                      "y": 0,
+                      "z": -4
+                    }
+                  ]
+                },
+                {
+                  "feature": "better_trees:trees/jungle_no_vine/branches",
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": 0,
+                      "y": 0,
+                      "z": 4
+                    }
+                  ]
+                },
+                {
+                  "feature": {
+                    "type": "minecraft:block_column",
+                    "direction": "south",
+                    "allowed_placement": {
+                      "type": "minecraft:true"
+                    },
+                    "prioritize_tip": false,
+                    "layers": [
+                      {
+                        "height": 9,
+                        "provider": {
+                          "type": "minecraft:rule_based",
+                          "rules": [
+                            {
+                              "if_true": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "#minecraft:replaceable_by_trees"
+                              },
+                              "then": {
+                                "type": "minecraft:simple",
+                                "state": {
+                                  "id": "minecraft:jungle_log",
+                                  "properties": {
+                                    "axis": "z"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": 0,
+                      "y": -1,
+                      "z": -4
+                    }
+                  ]
+                },
+                {
+                  "feature": {
+                    "type": "minecraft:block_column",
+                    "direction": "east",
+                    "allowed_placement": {
+                      "type": "minecraft:true"
+                    },
+                    "prioritize_tip": false,
+                    "layers": [
+                      {
+                        "height": 9,
+                        "provider": {
+                          "type": "minecraft:rule_based",
+                          "rules": [
+                            {
+                              "if_true": {
+                                "type": "minecraft:matching_blocks",
+                                "blocks": "#minecraft:replaceable_by_trees"
+                              },
+                              "then": {
+                                "type": "minecraft:simple",
+                                "state": {
+                                  "id": "minecraft:jungle_log",
+                                  "properties": {
+                                    "axis": "x"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "placement": [
+                    {
+                      "type": "minecraft:offset",
+                      "x": -4,
+                      "y": -1,
+                      "z": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            "placement": [
+              {
+                "type": "minecraft:environment_scan",
+                "direction_of_search": "up",
+                "max_steps": 32,
+                "target_condition": {
+                  "type": "minecraft:not",
+                  "predicate": {
+                    "type": "minecraft:matching_blocks",
+                    "offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "blocks": "#minecraft:jungle_logs"
+                  }
+                },
+                "allowed_search_condition": {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "#minecraft:jungle_logs"
+                }
+              },
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": -5,
+                "z": 0
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    }
+  ]
+}

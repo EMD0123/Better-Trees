@@ -1,0 +1,412 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    {
+      "feature": "better_trees:trees/mega_jungle/tree",
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:volume_match",
+            "min": [
+              0,
+              0,
+              0
+            ],
+            "max": [
+              0,
+              7,
+              0
+            ],
+            "match": {
+              "type": "minecraft:matching_block_tag",
+              "tag": "minecraft:replaceable_by_trees"
+            }
+          }
+        },
+        {
+          "type": "minecraft:offset",
+          "x": 0,
+          "y": 7,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:simple_block",
+              "to_place": "minecraft:soil_beneath_tree"
+            },
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": -1,
+                "z": 0
+              }
+            ]
+          },
+          {
+            "feature": {
+              "type": "minecraft:block_column",
+              "direction": "up",
+              "allowed_placement": {
+                "type": "minecraft:true"
+              },
+              "prioritize_tip": false,
+              "layers": [
+                {
+                  "height": 6,
+                  "provider": {
+                    "type": "minecraft:simple",
+                    "state": {
+                      "id": "minecraft:jungle_log"
+                    }
+                  }
+                }
+              ]
+            },
+            "placement": []
+          },
+          {
+            "feature": "better_trees:trees/mega_jungle/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": -1,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 2,
+                  "max_inclusive": 3
+                },
+                "z": 0
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_jungle/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 1,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 2,
+                  "max_inclusive": 3
+                },
+                "z": 0
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_jungle/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 2,
+                  "max_inclusive": 3
+                },
+                "z": -1
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_jungle/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 2,
+                  "max_inclusive": 3
+                },
+                "z": 1
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_jungle/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": -2,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 1
+                },
+                "z": 0
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "blocks": "minecraft:jungle_wood"
+                }
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_jungle/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 2,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 1
+                },
+                "z": 0
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    -1,
+                    0,
+                    0
+                  ],
+                  "blocks": "minecraft:jungle_wood"
+                }
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_jungle/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 1
+                },
+                "z": -2
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    1
+                  ],
+                  "blocks": "minecraft:jungle_wood"
+                }
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_jungle/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 1
+                },
+                "z": 2
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    0,
+                    -1
+                  ],
+                  "blocks": "minecraft:jungle_wood"
+                }
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_jungle/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": -1,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 1
+                },
+                "z": -1
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:jungle_wood"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "blocks": "minecraft:jungle_wood"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_jungle/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 1,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 1
+                },
+                "z": -1
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:jungle_wood"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        1
+                      ],
+                      "blocks": "minecraft:jungle_wood"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_jungle/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 1,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 1
+                },
+                "z": 1
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        -1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:jungle_wood"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "blocks": "minecraft:jungle_wood"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_jungle/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": -1,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 1
+                },
+                "z": 1
+              },
+              {
+                "type": "minecraft:block_predicate_filter",
+                "predicate": {
+                  "type": "minecraft:any_of",
+                  "predicates": [
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        1,
+                        0,
+                        0
+                      ],
+                      "blocks": "minecraft:jungle_wood"
+                    },
+                    {
+                      "type": "minecraft:matching_blocks",
+                      "offset": [
+                        0,
+                        0,
+                        -1
+                      ],
+                      "blocks": "minecraft:jungle_wood"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:random_selector",
+  "features": [],
+  "default": {
+    "feature": "oak",
+    "placement": []
+  }
+}

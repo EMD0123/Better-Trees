@@ -1,0 +1,111 @@
+{
+  "type": "minecraft:tree",
+  "below_trunk_provider": "minecraft:soil_beneath_tree",
+  "decorators": [
+    {
+      "type": "minecraft:attached_to_leaves",
+      "probability": 0.5,
+      "exclusion_radius_xz": 0,
+      "exclusion_radius_y": 0,
+      "required_empty_blocks": 1,
+      "block_provider": {
+        "type": "minecraft:rule_based",
+        "rules": [
+          {
+            "if_true": {
+              "type": "minecraft:all_of",
+              "predicates": [
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    -1,
+                    1,
+                    0
+                  ],
+                  "blocks": "minecraft:spruce_leaves"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    1,
+                    1,
+                    0
+                  ],
+                  "blocks": "minecraft:spruce_leaves"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    1,
+                    -1
+                  ],
+                  "blocks": "minecraft:spruce_leaves"
+                },
+                {
+                  "type": "minecraft:matching_blocks",
+                  "offset": [
+                    0,
+                    1,
+                    1
+                  ],
+                  "blocks": "minecraft:spruce_leaves"
+                }
+              ]
+            },
+            "then": {
+              "type": "minecraft:simple",
+              "state": {
+                "id": "minecraft:spruce_leaves",
+                "properties": {
+                  "distance": "7",
+                  "persistent": "false",
+                  "waterlogged": "false"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "directions": [
+        "down"
+      ]
+    }
+  ],
+  "foliage_placer": {
+    "type": "minecraft:pine_foliage_placer",
+    "radius": 2,
+    "offset": 1,
+    "height": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 3,
+      "max_inclusive": 4
+    }
+  },
+  "foliage_provider": {
+    "id": "minecraft:spruce_leaves",
+    "properties": {
+      "distance": "7",
+      "persistent": "false",
+      "waterlogged": "false"
+    }
+  },
+  "ignore_vines": true,
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size"
+  },
+  "trunk_placer": {
+    "type": "minecraft:poplar_trunk_placer",
+    "base_height": 10,
+    "height_rand_a": 1,
+    "height_rand_b": 1,
+    "trunk_height_above_branches": 1,
+    "branch_amount": 4
+  },
+  "trunk_provider": {
+    "id": "minecraft:spruce_log",
+    "properties": {
+      "axis": "y"
+    }
+  }
+}

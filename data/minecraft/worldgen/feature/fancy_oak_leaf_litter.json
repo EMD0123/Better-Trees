@@ -1,8 +1,7 @@
-{
-  "type": "minecraft:random_selector",
-  "features": [],
-  "default": {
-    "feature": "oak_leaf_litter",
-    "placement": []
-  }
-}
+{ 
+  "type": "minecraft:sequence", 
+  "features": { 
+    "feature": "better_trees:trees/fancy_oak_leaf_litter", 
+    "placement": [] 
+  } 
+} 

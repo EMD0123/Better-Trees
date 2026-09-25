@@ -1,0 +1,104 @@
+{
+  "type": "minecraft:sequence",
+  "features": [
+    {
+      "feature": "better_trees:trees/mega_spruce/tree",
+      "placement": []
+    },
+    {
+      "feature": {
+        "type": "minecraft:overlay",
+        "features": [
+          {
+            "feature": {
+              "type": "minecraft:no_op"
+            },
+            "placement": []
+          },
+          {
+            "feature": "better_trees:trees/mega_spruce/branches",
+            "placement": [
+              {
+                "type": "minecraft:count",
+                "count": 32
+              },
+              {
+                "type": "minecraft:offset",
+                "x": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 1
+                },
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 16
+                },
+                "z": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 1
+                }
+              },
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": {
+                  "type": "minecraft:uniform",
+                  "min_inclusive": 0,
+                  "max_inclusive": 16
+                },
+                "z": 0
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_spruce/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_spruce/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 0,
+                "y": 0,
+                "z": 1
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_spruce/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 1,
+                "y": 0,
+                "z": 0
+              }
+            ]
+          },
+          {
+            "feature": "better_trees:trees/mega_spruce/roots",
+            "placement": [
+              {
+                "type": "minecraft:offset",
+                "x": 1,
+                "y": 0,
+                "z": 1
+              }
+            ]
+          }
+        ]
+      },
+      "placement": []
+    }
+  ]
+}

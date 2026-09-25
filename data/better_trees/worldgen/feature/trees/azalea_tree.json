@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:tree",
+  "below_trunk_provider": {
+    "id": "minecraft:rooted_dirt"
+  },
+  "decorators": [
+    {
+      "type": "minecraft:leave_vine",
+      "probability": 0.25
+    }
+  ],
+  "foliage_placer": {
+    "type": "minecraft:cherry_foliage_placer",
+    "radius": 3,
+    "offset": 1,
+    "height": 4,
+    "wide_bottom_layer_hole_chance": 0,
+    "corner_hole_chance": 0.5,
+    "hanging_leaves_chance": 0.5,
+    "hanging_leaves_extension_chance": 0.5
+  },
+  "foliage_provider": {
+    "type": "minecraft:weighted",
+    "entries": [
+      {
+        "data": "minecraft:azalea_leaves",
+        "weight": 3
+      },
+      {
+        "data": "minecraft:flowering_azalea_leaves",
+        "weight": 1
+      }
+    ]
+  },
+  "ignore_vines": false,
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size"
+  },
+  "trunk_placer": {
+    "type": "minecraft:forking_trunk_placer",
+    "base_height": 5,
+    "height_rand_a": 2,
+    "height_rand_b": 5
+  },
+  "trunk_provider": {
+    "id": "minecraft:oak_log",
+    "properties": {
+      "axis": "y"
+    }
+  }
+}

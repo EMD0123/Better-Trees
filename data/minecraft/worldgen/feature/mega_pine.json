@@ -1,67 +1,7 @@
-{
-  "type": "minecraft:sequence",
-  "features": [
-    {
-      "feature": "better_trees:mega_pine/tree",
-      "placement": []
-    },
-    {
-      "feature": {
-        "type": "minecraft:overlay",
-        "features": [
-          {
-            "feature": {
-              "type": "minecraft:no_op"
-            },
-            "placement": []
-          },
-          {
-            "feature": "better_trees:mega_spruce/roots",
-            "placement": [
-              {
-                "type": "minecraft:offset",
-                "x": 0,
-                "y": 0,
-                "z": 0
-              }
-            ]
-          },
-          {
-            "feature": "better_trees:mega_spruce/roots",
-            "placement": [
-              {
-                "type": "minecraft:offset",
-                "x": 0,
-                "y": 0,
-                "z": 1
-              }
-            ]
-          },
-          {
-            "feature": "better_trees:mega_spruce/roots",
-            "placement": [
-              {
-                "type": "minecraft:offset",
-                "x": 1,
-                "y": 0,
-                "z": 0
-              }
-            ]
-          },
-          {
-            "feature": "better_trees:mega_spruce/roots",
-            "placement": [
-              {
-                "type": "minecraft:offset",
-                "x": 1,
-                "y": 0,
-                "z": 1
-              }
-            ]
-          }
-        ]
-      },
-      "placement": []
-    }
-  ]
-}
+{ 
+  "type": "minecraft:sequence", 
+  "features": { 
+    "feature": "better_trees:trees/mega_pine", 
+    "placement": [] 
+  } 
+} 

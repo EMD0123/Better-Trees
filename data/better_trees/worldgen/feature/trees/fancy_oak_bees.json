@@ -1,0 +1,72 @@
+{
+  "type": "minecraft:tree",
+  "below_trunk_provider": "minecraft:soil_beneath_tree",
+  "root_placer": {
+    "type": "minecraft:mangrove_root_placer",
+    "root_provider": {
+      "type": "minecraft:simple",
+      "state": {
+        "id": "minecraft:oak_wood"
+      }
+    },
+    "trunk_offset_y": 0,
+    "above_root_placement": {
+      "above_root_provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:oak_wood"
+        }
+      },
+      "above_root_placement_chance": 0.5
+    },
+    "mangrove_root_placement": {
+      "max_root_width": 1,
+      "max_root_length": 20,
+      "random_skew_chance": 1,
+      "can_grow_through": "#minecraft:replaceable",
+      "muddy_roots_in": "minecraft:mud",
+      "muddy_roots_provider": {
+        "type": "minecraft:simple",
+        "state": {
+          "id": "minecraft:oak_wood"
+        }
+      }
+    }
+  },
+  "decorators": [
+    {
+      "type": "minecraft:beehive",
+      "probability": 1
+    }
+  ],
+  "foliage_placer": {
+    "type": "minecraft:fancy_foliage_placer",
+    "radius": 2,
+    "offset": 4,
+    "height": 4
+  },
+  "foliage_provider": {
+    "id": "minecraft:oak_leaves",
+    "properties": {
+      "distance": "7",
+      "persistent": "false",
+      "waterlogged": "false"
+    }
+  },
+  "ignore_vines": true,
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size"
+  },
+  "trunk_placer": {
+    "type": "minecraft:fancy_trunk_placer",
+    "base_height": 16,
+    "height_rand_a": 12,
+    "height_rand_b": 12
+  },
+  "trunk_provider": {
+    "id": "minecraft:oak_log",
+    "properties": {
+      "axis": "y"
+    }
+  }
+}
