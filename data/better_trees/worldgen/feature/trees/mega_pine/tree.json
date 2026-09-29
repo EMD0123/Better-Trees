@@ -228,18 +228,21 @@
             "if_true": {
               "type": "minecraft:volume_match",
               "min": [
-                -2,
+                -1,
                 0,
-                -2
+                -1
               ],
               "max": [
-                2,
-                0,
-                2
+                1,
+                1,
+                1
               ],
               "match": {
-                "type": "minecraft:matching_block_tag",
-                "tag": "minecraft:replaceable_by_trees"
+                "type": "minecraft:not",
+                "predicate": {
+                  "type": "minecraft:matching_blocks",
+                  "blocks": "minecraft:spruce_leaves"
+                }
               }
             },
             "then": {
